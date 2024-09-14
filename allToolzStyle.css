@@ -14,6 +14,13 @@
     }
   }
 
+body{
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
 
 h1{
     text-align: center;
@@ -21,18 +28,15 @@ h1{
 }
 
 .Toolz{
-    width: 90vw;
-    height: 70vh;
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
 
     display: flex;
-    flex-direction: column;
 
     margin: 5vh 5vw;
-}
-
-.Row{
-    display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .TopField{
@@ -42,9 +46,11 @@ h1{
 }
 
 a{
+    box-sizing: border-box;
+
     margin: 1vh 1vh;
     width: calc((90vw / 3) - 1vh);
-    height: calc((70vw / 3) - 1vh);
+    height: calc((100vh / 3) - 1vh);
     background: var(--lighterBg);
     padding: 5px;
 

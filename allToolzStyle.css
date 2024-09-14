@@ -1,0 +1,54 @@
+:root{
+    --bg: #36393f;
+    --foregound: #FEF3E2;
+    --accent: #BEC6A0;
+    --lighterBg: #4e525a;
+}
+
+@media (prefers-color-scheme: light) {
+    :root{
+        --bg: #FEF3E2;
+        --foregound: #36393f;
+        --accent: #708871;
+        --lighterBg: #fcf6ec;
+    }
+  }
+
+
+h1{
+    text-align: center;
+    margin: 1vh;
+}
+
+.Toolz{
+    width: 90vw;
+    height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 5vh 5vw;
+}
+
+.Row{
+    display: flex;
+    flex-direction: row;
+}
+
+.TopField{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a{
+    margin: 1vh 1vh;
+    width: calc((90vw / 3) - 1vh);
+    height: calc((70vw / 3) - 1vh);
+    background: var(--lighterBg);
+    padding: 5px;
+
+    border-radius: 1rem;
+
+    overflow: hidden;
+}

@@ -1,0 +1,31 @@
+:root{
+    --bg: #36393f;
+    --foregound: #FEF3E2;
+    --accent: #BEC6A0;
+}
+
+@media (prefers-color-scheme: light) {
+    :root{
+        --bg: #FEF3E2;
+        --foregound: #36393f;
+        --accent: #708871;
+    }
+  }
+
+*{
+    text-decoration: none;
+    color: var(--foregound);;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+}
+
+body{
+    color: var(--foregound);
+    background: var(--bg);
+}
+
+strong{
+    color: var(--accent);
+}
+

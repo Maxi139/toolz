@@ -1,0 +1,61 @@
+:root{
+    --bg: #36393f;
+    --bg-lighter: #4d5056;
+    --foregound: #FEF3E2;
+    --accent: #BEC6A0;
+}
+
+@media (prefers-color-scheme: light) {
+    :root{
+        --bg: #FEF3E2;
+        --bg-lighter: #f9f4ec;
+        --foregound: #36393f;
+        --accent: #708871;
+    }
+  }
+
+.title{
+    margin: 3vw;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+#Passcode{
+    background: var(--bg-lighter);
+    border: var(--foregound) 1px solid;
+    margin: 3vw 1vh;
+    width: 70vw;
+    height: 5vh;
+    border-radius: 1vh;
+    line-height: 5vh;
+
+    font-size: 3vh;
+}
+
+#Range{
+    background: var(--bg-lighter);
+    border: var(--foregound) 1px solid;
+    margin: 3vw 1vh;
+    width: 70vw;
+    height: 5vh;
+    border-radius: 1vh;
+    line-height: 5vh;
+
+    font-size: 3vh;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    color: var(--accent);
+  }
+
+button{
+    width: 20vw;
+    height: 5vh;
+    border-radius: 1vh;
+    margin: 3vw 1vh;
+    background: var(--bg-lighter);
+    border: var(--foregound) 1px solid;
+}

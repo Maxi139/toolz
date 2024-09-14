@@ -16,11 +16,13 @@
 
 .title{
     margin: 3vw;
+    font-size: 41px;
 }
 
 .main{
     display: flex;
     flex-direction: column;
+    margin: 3vw;
 }
 
 #Passcode{
@@ -47,15 +49,35 @@
     font-size: 3vh;
 }
 
-input[type='range']::-webkit-slider-runnable-track {
-    color: var(--accent);
+#Range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: var(--accent);
+    cursor: pointer;
+  }
+
+#Range::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
   }
 
 button{
     width: 20vw;
     height: 5vh;
     border-radius: 1vh;
-    margin: 3vw 1vh;
+    margin: 3vw 0;
     background: var(--bg-lighter);
     border: var(--foregound) 1px solid;
+}
+
+p{
+    color: var(--accent);
+    font-weight: bolder;
+    font-size: 32px;
 }

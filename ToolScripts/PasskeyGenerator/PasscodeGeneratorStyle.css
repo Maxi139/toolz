@@ -28,56 +28,112 @@
 #Passcode{
     background: var(--bg-lighter);
     border: var(--foregound) 1px solid;
-    margin: 3vw 1vh;
+    margin: 3vw 1vh 1.5vw 1vh;
     width: 70vw;
     height: 5vh;
     border-radius: 1vh;
-    line-height: 5vh;
+    line-height: 3vh;
+
+    padding: 1vh 1vw;
 
     font-size: 3vh;
+
+    overflow: hidden;
 }
 
-#Range{
-    background: var(--bg-lighter);
-    border: var(--foregound) 1px solid;
-    margin: 3vw 1vh;
-    width: 70vw;
-    height: 5vh;
-    border-radius: 1vh;
-    line-height: 5vh;
-
-    font-size: 3vh;
-}
-
-#Range::-webkit-slider-thumb {
+input[type="range"] {
+    /* removing default appearance */
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%; 
-    background: var(--accent);
+    margin: 1.5vw 1vh;
+    /* creating a custom design */
+    width: 70vw;
     cursor: pointer;
+    outline: none;
+    /*  slider progress trick  */
+    overflow: hidden;
+    border-radius: 16px;
   }
-
-#Range::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
+  
+  /* Track: webkit browsers */
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 15px;
+    background: var(--foregound);
+    border-radius: 16px;
+  }
+  
+  /* Track: Mozilla Firefox */
+  input[type="range"]::-moz-range-track {
+    height: 15px;
+    background: var(--foregound);
+    border-radius: 16px;
+  }
+  
+  /* Thumb: webkit */
+  input[type="range"]::-webkit-slider-thumb {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none; 
+    /* creating a custom design */
+    height: 15px;
+    width: 15px;
+    background-color: var(--foregound);
     border-radius: 50%;
-    background: var(--accent);
-    cursor: pointer;
+    border: 2px solid var(--accent);
+    /*  slider progress trick  */
+    box-shadow: -70vw 0 0 calc(70vw - (15px / 2)) var(--accent);
+  }
+  
+  
+  /* Thumb: Firefox */
+  input[type="range"]::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #f50;
+    /*  slider progress trick  */
+    box-shadow: -407px 0 0 400px #f50;
   }
 
 button{
     width: 20vw;
-    height: 5vh;
+    height: 7vh;
     border-radius: 1vh;
-    margin: 3vw 0;
+    margin: 1.5vw 1vh;
     background: var(--bg-lighter);
     border: var(--foregound) 1px solid;
+    line-height: 5vh;
+
+    font-size: 25px;
+
+    box-shadow: none;
+
+    transition: all 0.5s;
 }
+
+button:hover{
+    -webkit-box-shadow: 5px 5px 30px -5px var(--accent);
+    -moz-box-shadow: 5px 5px 30px -5px var(--accent);
+    box-shadow: 5px 5px 30px -5px var(--accent);
+}
+
+button img{
+    height: 3vh;
+    margin: 1vh 1vw 1vh 0.5vw;
+
+    position: absolute;
+}
+
+@media (prefers-color-scheme: light) {
+    button img{
+        filter: invert(1);
+    }
+  }
 
 p{
     color: var(--accent);
     font-weight: bolder;
     font-size: 32px;
+    margin: 1.5vw 1vh;
 }

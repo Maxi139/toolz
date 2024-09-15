@@ -118,7 +118,7 @@ button{
     border: var(--foregound) 1px solid;
     line-height: 5vh;
 
-    font-size: auto;
+    font-size: 25px;
 
     box-shadow: none;
 
@@ -154,33 +154,29 @@ p{
 }
 
 .CheckBoxes{
+  margin: 4vh 1vh;
+
   display: flex;
   flex-direction: column;
 }
 
 .CheckBoxes label{
   margin: 0.5vh 0;
-  transform: translate(0, -4.5vh);
-  font-size: 25px;
+  font-size: 15px;
 
   height: 3vh;
 }
 
 input[type="checkbox"] {
   position: relative;
-  left: 15px;
-  top: -4px;
   z-index: 0;
   -webkit-appearance: none;
-}
-input[type="checkbox"] + label {
-  position: absolute;
 }
 input[type="checkbox"] + label::before {
   width: 15px;
   height: 15px;
   border-radius: 5px;
-  border: 2px solid #8cad2d;
+  border: 2px solid var(--accent);
   background-color: #fff;
   display: block;
   content: "";
@@ -191,5 +187,5 @@ input[type="checkbox"] + label::before {
 }
 input[type="checkbox"]:checked+label::before {
   box-shadow: inset 0px 0px 0px 3px #fff;
-  background-color: #8cad2d;
+  background-color: var(--accent);
 }

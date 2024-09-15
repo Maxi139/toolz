@@ -83,6 +83,10 @@ function validate() {
       usedChars.remove(specialCharacters)
     }
   }
+
+  if(usedChars.length == 0){
+    usedChars.push(lowercaseLetters);
+  }
 }
 
 

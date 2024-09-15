@@ -19,6 +19,16 @@
             <input type="range" id="Range" min="8" max="60">
             <p id="RangeDisplay">Länge: 34</p>
         </div>
+        <div class="CheckBoxes">
+            <input type="checkbox" id="lowercase" checked onclick="GeneratePasscode(document.getElementById('Range').value)">
+            <label for="lowercase">Kleinbuchstaben</label>
+            <input type="checkbox" id="uppercase" onclick="GeneratePasscode(document.getElementById('Range').value)">
+            <label for="uppercase">Großbuchstaben</label>
+            <input type="checkbox" id="numbers" onclick="GeneratePasscode(document.getElementById('Range').value)">
+            <label for="numbers">Zahlen</label>
+            <input type="checkbox" id="special" onclick="GeneratePasscode(document.getElementById('Range').value)">
+            <label for="special">Sonderzeichen</label>
+        </div>
         <div class="Buttons">
             <button onclick="GeneratePasscode(document.getElementById('Range').value)">Neues Passwort Generieren</button>
             <button onclick="copy()" id="copy">Passwort kopieren<img src="copy.svg"></button>

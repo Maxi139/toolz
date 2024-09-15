@@ -49,11 +49,47 @@ function copy() {
   document.getElementById("copy").innerHTML = "Passwort kopiert";
 }
 
-usedChars = [lowercaseLetters, uppercaseLetters, specialCharacters, numbers];
+usedChars = []
+
+function validate() {
+  if (document.getElementById('lowercase').checked) {
+      usedChars.push(lowercaseLetters)
+  } else {
+    if(usedChars.includes(lowercaseLetters)){
+      usedChars.remove(lowercaseLetters)
+    }
+  }
+
+  if (document.getElementById('uppercase').checked) {
+      usedChars.push(uppercaseLetters)
+  } else {
+    if(usedChars.includes(uppercaseLetters)){
+      usedChars.remove(uppercaseLetters)
+    }
+  }
+
+  if (document.getElementById('numbers').checked) {
+      usedChars.push(numbers)
+  } else {
+    if(usedChars.includes(numbers)){
+      usedChars.remove(numbers)
+    }
+  }
+
+  if (document.getElementById('special').checked) {
+      usedChars.push(specialCharacters)
+  } else {
+    if(usedChars.includes(specialCharacters)){
+      usedChars.remove(specialCharacters)
+    }
+  }
+}
 
 
 
 function GeneratePasscode(länge){
+    validate();
+    console.log(usedChars);
     allItems = [];
 
     for (var item in usedChars) {

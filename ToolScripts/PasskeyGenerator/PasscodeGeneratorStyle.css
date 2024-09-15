@@ -99,14 +99,14 @@ input[type="range"] {
 
 .Buttons{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 1.5vw 0;
 
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 
-  height: 7vh;
-  overflow: hidden;
+  height: 10vh;
+  width: 100vw;
 
 }
 button{
@@ -118,11 +118,13 @@ button{
     border: var(--foregound) 1px solid;
     line-height: 5vh;
 
-    font-size: 25px;
+    font-size: auto;
 
     box-shadow: none;
 
     transition: all 0.5s;
+
+    overflow: hidden;
 }
 
 button:hover{
@@ -149,4 +151,22 @@ p{
     font-weight: bolder;
     font-size: 32px;
     margin: 1.5vw 1vh;
+}
+
+.CheckBoxes{
+  display: flex;
+  flex-direction: column;
+}
+
+.CheckBoxes label{
+  margin: 0.5vh 0;
+  transform: translate(0, -4.5vh);
+  font-size: 25px;
+
+  height: 3vh;
+}
+
+input[type="checkbox"]{
+  margin: 0.5vh 0.5vw;
+  height: 3vh;
 }
